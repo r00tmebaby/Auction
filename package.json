@@ -1,0 +1,29 @@
+{
+  "name": "auction",
+  "version": "1.0.0",
+  "description": "Auction app",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "author": "r00tmebaby",
+  "license": "ISC",
+  "dependencies": {
+    "@hapi/joi": "^15.0.3",
+    "@types/hapi__joi": "^17.1.8",
+    "bcryptjs": "^2.4.3",
+    "bee-queue": "^0.3.0",
+    "body-parser": "^1.19.1",
+    "dotenv": "^14.3.2",
+    "epxress": "^0.0.1-security",
+    "express": "^4.17.2",
+    "joy": "^0.1.1",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.29.1",
+    "mongoose": "^6.2.1",
+    "nodemon": "^2.0.15",
+    "passport": "^0.5.2",
+    "swagger-jsdoc": "^6.1.0",
+    "swagger-ui-express": "^4.3.0"
+  }
+}
