@@ -14,8 +14,8 @@ jobs:
     env:
       tf_version: '0.14.8'
       tf_working_dir: '.'
-      tf_bucket_name: 'cc2022-lab-7-terraform-state'
-      TF_VAR_project_id: 'cc2022-lab-7'
+      tf_bucket_name: 'cloud-concept-bucket'
+      TF_VAR_project_id: 'cloud-concept'
       TF_VAR_name: 'lab-7'
       TF_VAR_region: 'us-central1'
       TF_VAR_zone: 'us-central1-a'
