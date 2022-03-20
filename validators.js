@@ -43,7 +43,7 @@ const postAuctionValidation = data => {
         //Currently we asume that 365 days should be the maximum (configurable in .env)
         starting_price: joi.number().min(0).max(parseInt(process.env.MAX_BID)).required(),
         exp_time: joi.number().min(0).max(parseInt(process.env.MAX_AUCTION_TIME)).required(),
-        exp_type: joi.string().valid("minutes", "hours", "days").required(),
+        exp_type: joi.string().valid("seconds","minutes", "hours", "days").required(),
         item: joi.object(itemSchema).required() //Add to the item object to the auction
     })  
     return auctionSchema.validate(data)

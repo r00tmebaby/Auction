@@ -21,7 +21,7 @@ router.get("/history/:type", auth, async (req, res) => {
 
         auctions = await Auction.find(
             {
-                seller_id: { $ne: req.user._id }, // when the seller is the currently logged user
+                seller_id: req.user._id, // when the seller is the currently logged user
                 exp_date: filter_exipred, // when the time expired - aka. auction ended
                 bids: { $ne: [] } // If there is at least one bid, then there is a winner
             }
@@ -90,14 +90,5 @@ router.get("/history/:type", auth, async (req, res) => {
       }
     })
   })
-
-/************************************| POST |************************************************************
- * 
- * Change user details 
- * 
- */
-router.post("/details", auth, async (req, res) => {
-    return res.send({ message: "Under development!" })
-})
 
 module.exports = router

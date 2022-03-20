@@ -21,6 +21,9 @@ const AuctionModel = mongoose.Schema({
     seller_id:{
         type: String
     },
+    seller_name:{
+        type: String
+    },
     item: Item.schema.obj,
 
 })

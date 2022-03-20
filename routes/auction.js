@@ -108,7 +108,7 @@ router.post("/bid", auth, async (req, res) => {
         try {
             found_auction.save()
             return res.send({
-                message: "Your bid of " + get_money(actual_bid) + " was placed successfuly"
+                message: "Your bid of " + get_money(actual_bid) + " was placed successfully"
             })
         } catch (error) {
             return res.status(400).send({
@@ -124,7 +124,6 @@ router.post("/bid", auth, async (req, res) => {
  * 
  * */
 router.post("/add", auth, async (req, res) => {
-
     // Validation 1 to check user input
     const { error } = postAuctionValidation(req.body)
     if (error) {
@@ -137,7 +136,7 @@ router.post("/add", auth, async (req, res) => {
         condition: req.body.item.condition,
         description: req.body.item.description,
     })
-
+    
     /*
     We search for identical item title, description, condition and seller. 
     Each seller can have multiple items. Another good approach would be to
@@ -150,17 +149,19 @@ router.post("/add", auth, async (req, res) => {
         "item.condition": new_item.condition,
         "item.description": new_item.description
     })
+    
     if (exist)
         return res.json({
             message: "This item is added already"
         })
-    
+    const user = await User.findById(req.user._id)
     const new_auction = new Auction({
         // From the request exp_time and exp_type will be converted to timestamp
         exp_date: moment().add(req.body.exp_time, req.body.exp_type).unix(), 
         starting_price: req.body.starting_price,
         price: req.body.price,
         seller_id: req.user._id,
+        seller_name: user.name,
         item: new_item,
     })
 

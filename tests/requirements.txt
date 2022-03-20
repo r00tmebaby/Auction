@@ -1,0 +1,9 @@
+pymongo~=4.0.2
+dnspython
+requests~=2.27.1
+pytest~=7.1.0
+fastapi~=0.75.0
+pydantic~=1.9.0
+typing~=3.7.4.3
+tabulate~=0.8.9
+colorama~=0.4.4

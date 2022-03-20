@@ -88,27 +88,6 @@
  * 
  * */
 
-//*==================| CHANGE USER DETAILS |=================================*/
-/**
- * @openapi
- * /api/user/details:
- *   post:
- *     summary: Change user details ❌
- *     description: Change user details
- *     tags:
- *      [Users]
- *     responses:
- *       '200':
- *         description: A JSON object with message
- *         content:
- *           application/json:
- *             schema:
- *               type: array
- *               items:
- *                 type: string
- * 
- * */
-
 //*==================| USER AUCTION HISTORY |=================================*/
 /**
  * @openapi
@@ -224,7 +203,7 @@
  *                default: 5
  *              exp_type:
  *                type: string
- *                default: minutes   
+ *                default: seconds   
  *              item:
  *                type: object
  *                properties:
@@ -234,7 +213,7 @@
  *                  condition:
  *                    type: string
  *                    default: New
- *                  describtion: 
+ *                  description: 
  *                    type: string
  *                    default: My new item is great
  *     responses:       
@@ -248,44 +227,6 @@
  *                 type: string
  * 
  * */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*============================| MODELS |===================================== */
 /**
  * @swagger
@@ -351,15 +292,15 @@
  *         properties:
  *            title:
  *              type: string
- *              describtion: The item title
+ *              description: The item title
  *              example: Emporio Armani Gents Classic Watch
  *            condition:
  *              type: string
- *              describtion: The item conditon options [New, Used]
+ *              description: The item conditon options [New, Used]
  *              example: Used
  *            description:
  *              type: string
- *              describtion: The item title
+ *              description: The item title
  *              example: '
  *                         Model no:     AR2448
  *                         Movement:     High Quality Battery Powered Quartz Movement
@@ -376,7 +317,7 @@
  *                         2 Year DPW Warranty'
  *            other_info:
  *              type: json
- *              describtion: Any other relevant information [Optional]
+ *              description: Any other relevant information [Optional]
  *              example: Item has not been used, almost new 🤣
  * 
  */

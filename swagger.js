@@ -26,7 +26,6 @@ const swagger_options = {
         <li><strong>Won Items</strong> - You can see all items that you have won </li>
         <li><strong>Sold Items</strong> - You can see all items that you have sold</li>
         <li><strong>Lost Items</strong> - You can see all items that you have placed a bid but did not win</li>
-        <li><strong>Change Details</strong> <em>*- You can change your details <span class='text-danger'>(NOT IMPLEMENTED YET)<span></em></li>
         </ul></div>
         `,
         contact: {
